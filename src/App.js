@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react';
+import ServeWaitingList from './ServeWaitingList';
+import OnePersonTable from './data/components/tabels/OnePersonTable';
+import TwoPersonTable from './data/components/tabels/TwoPersonTable';
 
 function App() {
+
+const floor = require('./data/floor.json')
+console.log(floor);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <ServeWaitingList dataFromParent = {floor}></ServeWaitingList>
+     <OnePersonTable dataFromParent={floor}></OnePersonTable>
+     <TwoPersonTable dataFromParent={floor}></TwoPersonTable>
     </div>
   );
 }
