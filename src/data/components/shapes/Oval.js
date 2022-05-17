@@ -1,5 +1,5 @@
 function Oval (props) {
-  var circleStyle = {
+  var ovalStyle = {
     padding: 10,
     margin: 20,
     display: "inline-block",
@@ -8,9 +8,9 @@ function Oval (props) {
     background: "#red",
     borderRadius: "50%"
   };
-  circleStyle.backgroundColor = props.bgColor;
+  ovalStyle.backgroundColor = props.bgColor;
   return (
-    <div style={circleStyle}>
+    <div style={ovalStyle}>
     <div style= {{alignText:'center', fontSize:'50px', marginTop:'105px'}}>101</div>
     </div>
   );
